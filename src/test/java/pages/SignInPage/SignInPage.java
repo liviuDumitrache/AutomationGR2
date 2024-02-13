@@ -19,16 +19,26 @@ public class SignInPage extends BasePage {
         return instance;
     }
 
-    private By signInButton = By, id("btn1");
+    private By signInButton = By.id("btn1");
+    private By logo = By.id("logo");
+    private By emailField = By.xpath("//input[@ng-model='Email']");
+    private By passwordField = By.xpath("//input[@ng-model='Password']");
 
+
+    //metoda asta face clic pe buton
     public void clicksignInButton() {
         LOG.info("Click 'Sign' in button");
         driver.findElement(signInButton).click();
     }
 
-    public  boolean isSignINButtonDisplayed(){
-        LOG.info(("Very if 'Sign in button is dysplayed");
+    public boolean isSignINButtonDisplayed() {
+        LOG.info("Very if 'Sign in button is displayed");
         return driver.findElement(signInButton).isDisplayed();
+    }
+
+    public boolean isLogoDisplayed() {
+        LOG.info("Very if Logo image is didplayed");
+        return driver.findElement(logo).isDisplayed();
 
 
     }
