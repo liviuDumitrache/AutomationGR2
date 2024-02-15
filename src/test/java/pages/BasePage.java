@@ -35,5 +35,7 @@ public class BasePage {
             return baseurl.replace("Index.html", "");
         }
         return baseurl;
+
+
     }
 }
