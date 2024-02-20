@@ -27,6 +27,8 @@ public class SignInPage extends BasePage {
     private By enterButton = By.id("enterbtn");
     private By errormesage = By.id("errormsg");
     private By skipSignInButton = By.id("btn2");
+    private By signUp = By.id("email");
+    private By registerButton = By.id("enterimg");
 
 
     //metoda asta face clic pe buton
@@ -66,13 +68,24 @@ public class SignInPage extends BasePage {
         return driver.findElement(errormesage).isDisplayed();
     }
 
-    public void clickBack(){
+    public void clickBack() {
         LOG.info("Click back in browser");
         driver.navigate().back();
     }
-    public void clickSkipSignInButton(){
+
+    public void clickSkipSignInButton() {
         LOG.info("Click 'Skip sign in button' ");
         driver.findElement(skipSignInButton).click();
+    }
+
+    public void insertemail(String email) {
+        LOG.info("insert email adress");
+        driver.findElement(signUp).sendKeys(email);
+    }
+
+    public void clickregisterButton() {
+        LOG.info("click register button");
+        driver.findElement(registerButton).click();
     }
 
 }
