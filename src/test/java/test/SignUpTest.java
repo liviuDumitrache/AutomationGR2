@@ -17,7 +17,10 @@ public class SignUpTest extends BaseTest {
 
         LOG.info("click register button");
         signInPage.clickregisterButton();
-
-
     }
+
+
+
+
+
 }
