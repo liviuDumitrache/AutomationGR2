@@ -88,5 +88,7 @@ public class SignInPage extends BasePage {
         driver.findElement(registerButton).click();
     }
 
+
+
 }
 
